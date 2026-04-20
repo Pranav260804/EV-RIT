@@ -11,6 +11,16 @@
 
 ## 🚀 Overview
 **EV-RIT** is a full-stack, dual-architecture Capstone project. It bridges a modern **Next.js 14 consumer-facing web application** with an elite, analytical **Python Streamlit Terminal** dedicated to Electric Vehicle (EV) infrastructure, battery machine learning diagnostics, embedded financial charting (TradingView), and real-time mapping of high-grade Level 2/Level 3 DC Fast Chargers.
+<img width="1919" height="1079" alt="Screenshot 2026-04-20 192900" src="https://github.com/user-attachments/assets/8afbee08-8ef7-4255-913c-5278fdaf530a" />
+<img width="1919" height="1078" alt="Screenshot 2026-04-20 192925" src="https://github.com/user-attachments/assets/f9cea771-4774-47ce-a2d4-4d3857da6b22" />
+<img width="1919" height="1079" alt="Screenshot 2026-04-20 192956" src="https://github.com/user-attachments/assets/5462948d-34ef-48fb-8ef0-114cbf453039" />
+<img width="1913" height="1079" alt="Screenshot 2026-04-20 193007" src="https://github.com/user-attachments/assets/0b8a7cfd-caf5-4606-96ec-50038f8b3f22" />
+<img width="1919" height="1078" alt="Screenshot 2026-04-20 193026" src="https://github.com/user-attachments/assets/bab8902d-b16f-412b-aefc-986c6513a48f" />
+<img width="1919" height="1079" alt="Screenshot 2026-04-20 193105" src="https://github.com/user-attachments/assets/e90340b6-28ec-44b2-9c15-f50851dbf23a" />
+<img width="1917" height="1079" alt="Screenshot 2026-04-20 193146" src="https://github.com/user-attachments/assets/2e2423ed-0490-42ac-a940-d8735001cf72" />
+<img width="1919" height="1078" alt="Screenshot 2026-04-20 193201" src="https://github.com/user-attachments/assets/c011b793-6f6c-4060-abcb-3dee95c399b0" />
+<img width="1919" height="1079" alt="Screenshot 2026-04-20 193214" src="https://github.com/user-attachments/assets/8106e55b-07bc-4c88-b795-ef0f82a95eba" />
+
 
 ## 🏗️ Architecture & Features
 
