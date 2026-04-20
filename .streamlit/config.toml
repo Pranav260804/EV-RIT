@@ -1,0 +1,14 @@
+[theme]
+# Deep Storm Black for the main background
+backgroundColor = "#05070A"
+
+# Elevated Midnight Blue for sidebars and cards
+secondaryBackgroundColor = "#0C121E"
+
+# Crisp White text for maximum contrast
+textColor = "#FFFFFF"
+
+# High-Voltage Electric Blue for primary accents
+primaryColor = "#00E5FF"
+
+font = "sans serif"

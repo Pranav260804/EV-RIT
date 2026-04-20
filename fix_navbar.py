@@ -1,0 +1,86 @@
+import re
+
+with open('app.py', 'r', encoding='utf-8') as f:
+    content = f.read()
+
+new_navbar = (
+    '# ------------------ UNIVERSAL NAVBAR ------------------\n'
+    'st.markdown(\n'
+    '    """<style>\n'
+    '.block-container { padding-top: 80px !important; }\n'
+    '.ev-navbar {\n'
+    '    position: fixed; top: 0; left: 0; width: 100%;\n'
+    '    background: #05070A; z-index: 99999;\n'
+    '    display: flex; justify-content: center; align-items: center;\n'
+    '    gap: 30px; padding: 15px 0;\n'
+    '    border-bottom: 1px solid #00E5FF;\n'
+    '    box-shadow: 0 0 15px rgba(0, 229, 255, 0.4);\n'
+    '    font-family: sans-serif;\n'
+    '}\n'
+    '.ev-navbar a {\n'
+    '    color: #A0AEC0; text-decoration: none; font-size: 14px;\n'
+    '    font-weight: 600; letter-spacing: 1px; text-transform: uppercase;\n'
+    '    transition: all 0.3s ease;\n'
+    '}\n'
+    '.ev-navbar a:hover { color: #00E5FF; text-shadow: 0 0 8px rgba(0,229,255,0.6); }\n'
+    '.ev-navbar .active {\n'
+    '    color: #FFFFFF; border-bottom: 2px solid #00E5FF;\n'
+    '    padding-bottom: 4px; text-shadow: 0 0 10px rgba(0,229,255,0.8);\n'
+    '}\n'
+    '.profile-wrapper { position: relative; display: inline-block; margin-left: auto; padding-right: 20px; }\n'
+    '.avatar-circle {\n'
+    '    width: 35px; height: 35px; background: #2E7D32; color: white;\n'
+    '    border-radius: 50%; display: flex; align-items: center; justify-content: center;\n'
+    '    font-weight: bold; cursor: pointer; border: 2px solid transparent; transition: border 0.2s;\n'
+    '}\n'
+    '.profile-wrapper:hover .avatar-circle { border: 2px solid #00E5FF; }\n'
+    '.profile-dropdown {\n'
+    '    display: none; position: absolute; right: 0; top: 45px;\n'
+    '    background-color: #0C121E; min-width: 220px; border-radius: 8px;\n'
+    '    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.6);\n'
+    '    border: 1px solid #1E293B; z-index: 100000; padding: 10px 0;\n'
+    '}\n'
+    '.profile-wrapper:hover .profile-dropdown { display: block; }\n'
+    '.dropdown-header { padding: 10px 15px; border-bottom: 1px solid #1E293B; }\n'
+    '.dropdown-header strong { color: #fff; display: block; }\n'
+    '.dropdown-header span { color: #8A9BB2; font-size: 12px; }\n'
+    '.dropdown-link {\n'
+    '    color: #E2E8F0 !important; padding: 10px 15px !important;\n'
+    '    text-decoration: none; display: block; font-size: 14px !important;\n'
+    '    text-transform: none !important; letter-spacing: normal !important; border: none !important;\n'
+    '}\n'
+    '.dropdown-link:hover { background-color: #1E293B; color: #00E5FF !important; text-shadow: none !important; }\n'
+    '.dropdown-divider { border-top: 1px solid #1E293B; margin: 5px 0; }\n'
+    '</style>\n'
+    '<div class="ev-navbar">\n'
+    '<a href="http://localhost:3000">&#127968; Home</a>\n'
+    '<a href="http://localhost:3000/marketplace">&#128722; EV Marketplace</a>\n'
+    '<a href="#" class="active">&#128187; Terminal OS</a>\n'
+    '<div class="profile-wrapper">\n'
+    '<div class="avatar-circle">P</div>\n'
+    '<div class="profile-dropdown">\n'
+    '<div class="dropdown-header">\n'
+    '<strong>Pranav Kale</strong>\n'
+    '<span>kalepranav2608@gmail.com</span>\n'
+    '</div>\n'
+    '<a href="#" class="dropdown-link">&#128230; Your Orders</a>\n'
+    '<a href="#" class="dropdown-link">&#129293; Wishlist</a>\n'
+    '<a href="http://localhost:3000/marketplace" class="dropdown-link">&#128717; EV Marketplace</a>\n'
+    '<div class="dropdown-divider"></div>\n'
+    '<a href="#" class="dropdown-link">&#8618; Sign Out</a>\n'
+    '</div>\n'
+    '</div>\n'
+    '</div>""",\n'
+    '    unsafe_allow_html=True,\n'
+    ')'
+)
+
+pattern = r'# -{2,} UNIVERSAL NAVBAR -{2,}\nst\.markdown\(.*?unsafe_allow_html=True\)'
+new_content = re.sub(pattern, new_navbar, content, flags=re.DOTALL)
+
+if new_content == content:
+    print('ERROR: Pattern not matched')
+else:
+    with open('app.py', 'w', encoding='utf-8') as f:
+        f.write(new_content)
+    print('SUCCESS: Navbar block fixed cleanly')
